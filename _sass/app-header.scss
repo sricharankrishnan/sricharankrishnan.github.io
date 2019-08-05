@@ -1,10 +1,17 @@
 @import "variables";
 
-.sampleNavBar {
-  background: $black;
-  padding: 15px;
-  p {
-    color: $white;
-    margin: 0;
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  .appNavParent {
+    .appLogo {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto;
+      padding: 15px 10px;
+    }
   }
 }

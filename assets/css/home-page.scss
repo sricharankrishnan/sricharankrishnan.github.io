@@ -1,204 +1,270 @@
 ---
 #Front End Matter Initialization - Do Not Delete This
 ---
-/* We are using web font loaders. In case you would like to 
-use the old fashion way of loading fonts with the font url link
-then uncommnent this and the details in ./_sass/font-file.scss
-
-@import "font-file";
-*/
 @import "common";
 @import "app-header";
 @import "app-footer";
 
-.pushTop15 {
-  margin-top: 15px;
-}
-
 .homePage {
   .jumbotronSection {
-    min-height: 100vh;
-    padding: 60px 15px;
+    height: 100vh;
+    background: url("../images/portfolio-photo-ref.jpg") no-repeat center center;
+    background-size: cover;
     overflow: hidden;
-    color: $default;
-    //background: $lightGrey;
-    .curtain {
+    .triangleBg {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
       width: 100%;
-      height: calc(100% + 60px);
-      z-index: 4;
-      //background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      opacity: 0.1;
+      max-width: 600px;
+      background: url("../icons/triangle-1.svg") no-repeat center center;
+      background-size: cover;
+      transform-origin: 50% 50%;
+      @include transition(all, 0.5s, ease);
     }
-		.videoParent {
-			position: absolute;
-			top: -5px;
-			left: -5px;
-			bottom: 0;
-			right: 0;
-			z-index: 1;
-			overflow: hidden;
-			transition-delay: 0.5s;
-			@include transition(all, 0.5s, linear);
-			video {
-				position: absolute;
-				top: -100%;
-				left: -100%;
-				bottom: -100%;
-				right: -100%;
-				min-width: 100%;
-				min-height: 100%;
-				margin: auto;
-				z-index: 5;
-			}
-		}
-		.videoParent.hiddenTransform {
-			opacity: 0;
-		}
+    .triangleBg.hiddenTransform {
+      transform: translate(-50%, -50%) scale(0);
+      -webkit-transform: translate(-50%, -50%) scale(0);
+    }
     .posContainer {
-      padding: 15px;
-      position: relative;
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      left: 0;
       z-index: 10;
+      width: 100%;
+      text-align: center;
+      .triangleIcon {
+        width: 75px;
+        margin-bottom: 115px;
+      }
       h1 {
-        margin-top: 0;
-        font-size: 7rem;
-        font-weight: 900;
+        font-size: 4.5rem;
+        margin-top: -30px;
+        color: $white;
         text-transform: uppercase;
-        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15), 0 -1px 0 rgba(255, 255, 255, 0.35);
-        color: #efefef;
+        overflow: hidden;
+        span {
+          display: block;
+          @include transition(all, 1.0s, ease);
+        }
       }
       p {
-        font-size: $baseFontSize/1.1;
-        color: #777777;
-        margin: 15px 0;
+        color: #f5f5f5;
+        font-size: $baseFontSize/1.2;
+        span {
+          display: block;
+          @include transition(all, 1.0s, ease);
+        }
       }
-      .defaultButton {
-        display: block;
-        width: 100%;
+      h1, p {
+        text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.15);
+      }
+      h1.hiddenTransform, p.hiddenTransform {
+        span {
+          transform: translateY(200%);
+        }
       }
     }
   }
-  .mainContentParent {
-    color: $black;
-    h2, h3, h4 {
-      font-size: 3.5rem;
-      color: #888888;
-      margin-top: 0;
-    }
-    p {
-      font-size: $baseFontSize/1.1;
-      font-weight: 400;
-    }
-    .contentSection {
-      max-width: 450px;
-      margin: 45px auto;
-      padding: 15px 15px 0;
-      .terminalCode {
-        padding: 8px;
-        border-radius: 3px;
-        background: $black;
-        color: $white;
-        font-size: $baseFontSize/1.3;
-        margin-bottom: 5px;
-        pre {
-          margin-bottom: 0;
-          font-size: $baseFontSize/1.3;
-          font-family: inherit;
-          background: none;
-          padding: 0;
-          border: 0;
-          border-radius: 0;
-          color: $white;
-        }
-      }
-      h2, h3 {
-        font-size: $baseFontSize/1.1;
-        font-weight: 600;
-        position: relative;
-        color: #4B8F8C;
-        margin-bottom: 25px;
-      }
-      h2:after, h3:after {
-        content: "";
-        position: absolute;
-        bottom: -12px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: #4B8F8C;
-      }
+  .jumbotronSection:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+  }
+  .jumbotronSection:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 15px);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    z-index: 10;
+    background: url("../icons/dot-bg.png") repeat center center;
+    @include transition(all, 1.5s, ease);
+  }
+  .jumbotronSection.hiddenTransform:after {
+    transform: translate(-50%, 80%);
+    -webkit-transform: translate(-50%, 80%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .textSection {
+    padding: 100px 15px;
+    background: $black;
+    .posContainer {
+      width: 85%;
+      margin-left: auto;
+      margin-top: 100px;
+      text-align: right;
       p {
-        font-weight: 400;
-        color: $fontGrey;
-        font-size: $baseFontSize/1.1;
-        margin-bottom: 15px;
-        .subHeading {
-          color: $black;
-          display: block;
-        }
-        .description {
-          padding-left: 15px;
-          display: block;
-          margin-top: 5px;
-          margin-bottom: 15px;
-        }
-        .featureLocation {
-          font-size: $baseFontSize/1.5;
-          display: block;
-          margin: 5px 0 5px 15px;
-          .innerText {
+        margin: 0;
+        color: $white;
+        font-size: $baseFontSize/1.2;
+        font-family: $appFont;
+        @include transition(all, 0.5s, ease);
+        transition-delay: 0.3s;
+      }
+    }
+  }
+  .textSection.hiddenTransform {
+    .posContainer {
+      p {
+        transform: translateY(20px);
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  .textSection:before {
+    content: "The Journey";
+    color: $white;
+    font-family: $appFont;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 145px;
+    left: -57px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    @include transition(all, 0.5s, ease);
+    transition-delay: 0.15s;
+    letter-spacing: 9px;
+    opacity: 0.5;
+  }
+  .textSection:after {
+    content: "";
+    position: absolute;
+    top: 335px;
+    left: -47px;
+    width: 150px;
+    height: 1px;
+    background: $white;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    opacity: 0.2;
+    @include transition(all, 0.5s, ease);
+  }
+  .textSection.hiddenTransform:before {
+    transform: rotate(90deg) translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .textSection.hiddenTransform:after {
+    width: 0;
+  }
+  .portfolioSection {
+    background: $black;
+    .customRow {
+      .segment {
+        .posContainer {
+          padding: 15px;
+          width: 90%;
+          h2, p, .defaultButton {
+            @include transition(all, 0.8s, ease);
+          }
+          h2 {
+            margin-top: 0;
+            color: $default;
+            font-size: 2.0rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            position: relative;
+          }
+          h2:before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: -15px;
+            width: 50px;
+            height: 50px;
+            background: url("../icons/bars.svg") no-repeat center center;
+            background-size: 15px;
+          }
+          p {
+            font-size: $baseFontSize/1.15;
             color: $white;
-            padding: 5px;
+            transition-delay: 0.25s;
+          }
+          .defaultButton {
             background: $black;
-            border-radius: 3px;
-            margin: 1px 0;
-            display: inline-block;
+            border: 3px solid $green;
+            color: $green;
+            width: 135px;
+            transition-delay: 0.5s;
+            span {
+              background: url("../icons/right-arrow-icon.svg") no-repeat right center;
+              background-size: 15px;
+              padding-right: 25px;
+            }
           }
         }
       }
-      p.featureP {
-        margin-bottom: 25px;
-      }
-      .defaultList {
-        margin-bottom: 0;
-        li {
-          font-size: $baseFontSize/1.1;
-          font-weight: 400;
-          color: $fontGrey;
-          margin-bottom: 5px;
-          padding-left: 20px;
-          background: url("../icons/list-bullet-icon.svg") no-repeat 0 5px;
-          background-size: 15px;
+      .segment.hiddenTransform {
+        .posContainer {
+          h2, p, .defaultButton {
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+          }
         }
       }
-    }
-    .contentSection:first-child {
-      margin-top: 60px;
-    }
-    .contentSection:last-child {
-      margin-bottom: 60px;
-    }
-    .contentSection.toc {
-      border: 1px solid #f1f1f1;
-      border-radius: 5px;
-      padding: 15px;
-      max-width: calc(100% - 30px);
-      margin: 60px auto;
-    }
-    .contentSection.noticeClause {
-      padding: 15px;
-      background: rgba(255, 0, 0, 0.15);
-      border-radius: 5px;
-      max-width: 420px;
-      p {
-        margin-bottom: 0;
-        font-size: $baseFontSize/1.3;
+      .segment:before {
+        content: "";
+        display: block;
+        padding-top: 30%;
       }
     }
   }
+  .portfolioSection:before {
+    content: "The Portfolio";
+    color: $white;
+    font-family: $appFont;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 115px;
+    right: -60px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    @include transition(all, 0.5s, ease);
+    letter-spacing: 9px;
+    opacity: 0.5;
+  }
+  .portfolioSection:after {
+    content: "";
+    position: absolute;
+    top: 240px;
+    right: 40px;
+    width: 1px;
+    height: 150px;
+    background: $white;
+    opacity: 0.2;
+    @include transition(all, 0.5s, ease);
+  }
+  .portfolioSection.hiddenTransform:before {
+    transform: rotate(90deg) translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .portfolioSection.hiddenTransform:after {
+    height: 0;
+  }
 }
-
 @media only screen and (max-width: 767px) {
 	@media (min-aspect-ratio: 16/9) {
 		.homePage {
@@ -228,48 +294,174 @@ then uncommnent this and the details in ./_sass/font-file.scss
 }
 @media only screen and (min-width: 768px) {
   .homePage {
-    .outerBorder {
-      padding: 15px;
-      max-width: 1500px;
-      margin: 0 auto;
-    }
     .jumbotronSection {
-      min-height: 600px;
-      height: 650px;
-      padding: 0;
+      max-height: 600px;
+    }
+    .textSection {
       .posContainer {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 400px;
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        .triangleIcon {
+          width: 100px;
+          margin: 0 auto 15px;
+        }
+        p {
+          font-size: 1.5rem;
+          line-height: 27px;
+          text-transform: uppercase;
+        }
       }
     }
-    .mainContentParent {
-      .contentSection.toc {
-        max-width: 420px;
+    .textSection:after {
+      top: 259px;
+      left: 25px;
+      z-index: 10;
+      width: 1px;
+      height: 100px;
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+    .textSection.hiddenTransform:after {
+      width: 1px;
+      height: 0;
+    }
+    .portfolioSection {
+      .customRow {
+        .segment {
+          background: $black;
+          width: 50%;
+          float: left;
+          position: relative;
+          .posContainer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+        .segment:before {
+          padding-top: 80%;
+        }
+      }
+    }
+    .portfolioSection:before {
+      top: 25px;
+      z-index: 10;
+    }
+    .portfolioSection:after {
+      height: 255px;
+      top: 150px;
+      right: 42px;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .homePage {
+    .portfolioSection {
+      .customRow {
+        .segment {
+          width: 32%;
+          .posContainer {
+            bottom: auto;
+            top: 30px;
+          }
+        }
+        .segment:before {
+          padding-top: 110%;
+        }
       }
     }
   }
 }
 @media only screen and (min-width: 1200px) {
   .homePage {
-    background: url("../images/banner-bg.png") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
     .jumbotronSection {
-      min-height: auto;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 50%;
+      max-height: 650px;
+      background-attachment: fixed;
+      .triangleBg {
+        max-width: 650px;
+      }
     }
-    .mainContentParent {
-      width: 60%;
-      margin-left: auto;
+    .jumbotronSection:after {
+      max-width: 1000px;
+      height: 90%;
+    }
+    .textSection {
+      .posContainer {
+        p {
+          margin-top: 100px;
+        }
+      }
+    }
+    .textSection:before {
+      transform: none;
+      -webkit-transform: none;
+      left: calc(100% - 1290px);
+    }
+    .textSection:after {
+      left: calc(100% - 1290px);
+      top: 170px;
+    }
+    .textSection.hiddenTransform:before {
+      transform: translateY(20px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    .portfolioSection {
+      padding-bottom: 65px;
+      .customRow {
+        width: 100%;
+        max-width: 1270px;
+        margin: 0 auto;
+        .segment {
+          width: 31%;
+          .posContainer {
+            p {
+              margin-top: 15px;
+              font-size: 1.2rem;
+              line-height: 19px;
+            }
+          }
+        }
+        .segment:nth-child(3n + 2) {
+          .posContainer:before, .posContainer:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -25px;
+            width: 1px;
+            height: 250px;
+            background: $white;
+            opacity: 0.2;
+            @include transition(all, 0.8s, ease);
+          }
+          .posContainer:after {
+            left: auto;
+            right: 0;
+          }
+        }
+        .segment.hiddenTransform:nth-child(3n + 2) {
+          .posContainer:before, .posContainer:after {
+            height: 0;
+          }
+        }
+        .segment:nth-child(3n + 3) {
+          .posContainer {
+            left: -10px;
+          }
+        }
+        .segment:before {
+          padding-top: 75%;
+        }
+      }
+    }
+    .portfolioSection:before {
+      right: calc(100% - 1375px);
+    }
+    .portfolioSection:after {
+      right: calc(100% - 1274px);
     }
   }
 }

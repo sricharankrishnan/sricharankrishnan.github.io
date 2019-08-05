@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                                http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url><loc>https://sricharankrishnan.github.io/</loc></url>						
+
+<!-- Github Repository [4]-->
+<url><loc>https://www.championssportive.com/</loc></url>
+<url><loc>https://sricharankrishnan.github.io/jekyll-lava-boilerplate/</loc></url>
+<url><loc>https://sricharankrishnan.github.io/click-image-play-youtube-video/</loc></url>
+<url><loc>https://dawgweather.herokuapp.com/</loc></url>
+
+</urlset>

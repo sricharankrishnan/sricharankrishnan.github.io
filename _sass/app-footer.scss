@@ -1,10 +1,14 @@
 @import "variables";
 
-.sampleFooterBar {
-  background: $black;
+.footerBar {
+  background: #222;
   padding: 15px;
   p {
-    color: $white;
     margin: 0;
+    font-size: $baseFontSize/1.2;
+    a {
+      color: $green;
+      display: block;
+    }
   }
 }

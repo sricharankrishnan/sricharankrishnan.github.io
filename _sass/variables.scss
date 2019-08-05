@@ -1,11 +1,15 @@
 $appFont: 'Noto Sans KR', sans-serif;
+$appFont: 'Josefin Sans', sans-serif;
+$appFont: 'Hind Siliguri', sans-serif;
+$font: monospace;
 
 $black: #000000;
 $white: #ffffff;
 $default: #bbbbbb;
 $lightGrey: #fafafa;
-$fontGrey: #888888;
+$thisGrey: #888888;
 $linkBlue: #228CDB;
+$green: #69E781;
 
 $baseFontSize: 1.5rem;
 $h1Size: 4.0rem;
@@ -42,7 +46,8 @@ $baseFontSize: 1.6rem;
   margin-bottom: 2px;
   text-transform: uppercase;
   text-align: center;
-  line-height: 44px;
+  line-height: 40px;
+  height: 46px;
   display: inline-block;
   font-weight: 700;
   font-size: $baseFontSize/1.5;
