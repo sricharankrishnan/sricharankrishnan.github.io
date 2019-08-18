@@ -12,12 +12,7 @@
   {
     "title": "Jekyll Lava Boilerplate",
     "description": "For all you Jekyll Developers and Lovers out there. This is a simple boiler plate project that you can use to start building static front-end sites with.",
-    "applink": "https://sricharankrishnan.github.io/jekyll-lava-boilerplate/"
-  },
-  {
-    "title": "Meow Meow JS | Sniffer Project",
-    "description": "This is a client side javascript project that hosts a bunch of feature sniffing methods. Useful in case you'd want to avoid unnecessary checks and writing code.",
-    "applink": "https://meowmeowjs.netlify.com/"
+    "applink": "https://jekyll-lava-boilerplater.netlify.com/"
   },
   {
     "title": "Rotating Jumbotron Text",
