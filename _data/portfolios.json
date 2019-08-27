@@ -3,6 +3,10 @@
     "title": 'Champions <br class="hidden-xs"/>Sportive',
     "description": "A multi-city event conducted to crown a new Cycling Sportive Champion. A static front-end website.",
     "applink": "https://www.championssportive.com/"
+  }, {
+    "title": 'Wonderful Bakery <br/>[Demo Website]',
+    "description": "A portfolio frontend website built with Jekyll with some scroll effects for images and background HTML5 Video display.",
+    "applink": "https://wonderfulbakery.netlify.com/"
   },
   {
     "title": 'Dawg Weather <br class="hidden-xs"/>App',
