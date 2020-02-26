@@ -8,10 +8,20 @@ bodyClass: homePage
 stylesheet: "home-page.css"
 jsfile: "main.js"
 ---
+<!--handling gitlfs file serve for videos-->
+{% assign viewmode = "production" %}
+{% if viewmode == "development" %}
+  {% assign videopath = relBase %}
+{% endif %}
+{% if viewmode == "production" %}
+  {% assign videopath = "https://media.githubusercontent.com/media/sricharankrishnan/jekyll-lava-boilerplate/master/" %}
+{% endif %}
+<!--handling gitlfs file serve for videos-->
+
 <!--jumbotron section starts here-->
 <div class="jumbotronSection positionRelative" id="jumbotronSection"
-  data-mp4="/assets/videos/jumbotron-bg-video.mp4"
-  data-webm="/assets/videos/jumbotron-bg-video.webm"
+  data-mp4="{{ videopath }}assets/videos/jumbotron-bg-video.mp4"
+  data-webm="{{ videopath }}assets/videos/jumbotron-bg-video.webm"
 >
   <div class="posContainer text-center">
     <h1>Jekyll Lava Boiler Plate</h1>
