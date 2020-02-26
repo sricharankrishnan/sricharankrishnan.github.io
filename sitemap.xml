@@ -7,10 +7,9 @@
                                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url><loc>https://sricharankrishnan.github.io/</loc></url>						
-
-<!-- Github Repository [4]-->
 <url><loc>https://sricharankrishnan.github.io/jekyll-lava-boilerplate/</loc></url>
 <url><loc>https://sricharankrishnan.github.io/click-image-play-youtube-video/</loc></url>
 <url><loc>https://sricharankrishnan.github.io/html5-background-video-builder/</loc></url>
+<url><loc>https://sricharankrishnan.github.io/jekyll-lava-boilerplate/</loc></url>
 
 </urlset>
