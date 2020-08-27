@@ -81,7 +81,7 @@ a:hover {
   width: 50px;
   background: $black;
   position: fixed;
-  bottom: 15px;
+  bottom: 60px;
   right: 15px;
   z-index: 300;
   border-radius: 50%;
@@ -112,4 +112,56 @@ a:hover {
 .gadSection {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.a2a_kit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  a {
+    width: 20%;
+    padding: 8px;
+    .a2a_svg {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+  .a2a_dd {
+    background: rgb(1, 102, 255);
+  }
+  .a2a_button_facebook {
+    background: rgb(24, 119, 242);
+  }
+  .a2a_button_twitter {
+    background: rgb(85, 172, 238);
+  }
+  .a2a_button_pinterest {
+    background: rgb(189, 8, 28);
+  }
+  .a2a_button_whatsapp {
+    background: rgb(18, 175, 10);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .a2a_kit {
+    position: fixed;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width: 100%;
+    z-index: 1000;
+    a {
+      width: 20%;
+      padding: 8px;
+      .a2a_svg {
+        float: none;
+        margin: 0 auto;
+      }
+    }
+  }
 }
