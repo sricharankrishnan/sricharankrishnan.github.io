@@ -10,268 +10,600 @@ then uncommnent this and the details in ./_sass/font-file.scss
 @import "common/_common";
 @import "common/_app-header";
 @import "common/_app-footer";
+@import "vendor-components/html-5-bg/html5-video-bg-styles.scss";
+@import "vendor-components/youtube-overlay/youtube-overlay.scss";
+
+@keyframes circleAni {
+	0% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(25deg);
+	}
+	25% {
+		border-top-left-radius: 0;
+		transform: translate(-50%, -50%) rotate(50deg);
+		opacity: 0.1;
+	}
+	50% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(75deg);
+		opacity: 0.7;
+	}
+	75% {
+		transform: translate(-50%, -50%) rotate(100deg);
+		opacity: 0.3;
+	}
+	100% {
+		border-bottom-right-radius: 0;
+		transform: translate(-50%, -50%) rotate(125deg);
+		opacity: 0.8;
+	}
+}
+@-webkit-keyframes circleAni {
+	0% {
+		border-radius: 50%;
+		-webkit-transform: translate(-50%, -50%) rotate(25deg);
+	}
+	25% {
+		border-top-left-radius: 0;
+		-webkit-transform: translate(-50%, -50%) rotate(50deg);
+		opacity: 0.1;
+	}
+	50% {
+		border-radius: 50%;
+		-webkit-transform: translate(-50%, -50%) rotate(75deg);
+		opacity: 0.7;
+	}
+	75% {
+		-webkit-transform: translate(-50%, -50%) rotate(100deg);
+		opacity: 0.3;
+	}
+	100% {
+		border-bottom-right-radius: 0;
+		-webkit-transform: translate(-50%, -50%) rotate(125deg);
+		opacity: 0.8;
+	}
+}
+@-moz-keyframes circleAni {
+	0% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(25deg);
+	}
+	25% {
+		border-top-left-radius: 0;
+		transform: translate(-50%, -50%) rotate(50deg);
+		opacity: 0.1;
+	}
+	50% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(75deg);
+		opacity: 0.7;
+	}
+	75% {
+		transform: translate(-50%, -50%) rotate(100deg);
+		opacity: 0.3;
+	}
+	100% {
+		border-bottom-right-radius: 0;
+		transform: translate(-50%, -50%) rotate(125deg);
+		opacity: 0.8;
+	}
+}
+@-ms-keyframes circleAni {
+	0% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(25deg);
+		-webkit-transform: translate(-50%, -50%) rotate(25deg);
+	}
+	25% {
+		border-top-left-radius: 0;
+		transform: translate(-50%, -50%) rotate(50deg);
+		-webkit-transform: translate(-50%, -50%) rotate(50deg);
+		opacity: 0.1;
+	}
+	50% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(75deg);
+		-webkit-transform: translate(-50%, -50%) rotate(75deg);
+		opacity: 0.7;
+	}
+	75% {
+		transform: translate(-50%, -50%) rotate(100deg);
+		-webkit-transform: translate(-50%, -50%) rotate(100deg);
+		opacity: 0.3;
+	}
+	100% {
+		border-bottom-right-radius: 0;
+		transform: translate(-50%, -50%) rotate(125deg);
+		-webkit-transform: translate(-50%, -50%) rotate(125deg);
+		opacity: 0.8;
+	}
+}
+@-o-keyframes circleAni {
+	0% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(25deg);
+	}
+	25% {
+		border-top-left-radius: 0;
+		transform: translate(-50%, -50%) rotate(50deg);
+		opacity: 0.1;
+	}
+	50% {
+		border-radius: 50%;
+		transform: translate(-50%, -50%) rotate(75deg);
+		opacity: 0.7;
+	}
+	75% {
+		transform: translate(-50%, -50%) rotate(100deg);
+		opacity: 0.3;
+	}
+	100% {
+		border-bottom-right-radius: 0;
+		transform: translate(-50%, -50%) rotate(125deg);
+		opacity: 0.8;
+	}
+}
+
+@keyframes rotateDots {
+  from {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(360deg);
+  }
+}
+@-ms-keyframes rotateDots {
+  from {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(360deg);
+  }
+}
+@-webkit-keyframes rotateDots {
+  from {
+    -webkit-transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(360deg);
+  }
+}
+@-o-keyframes rotateDots {
+  from {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(360deg);
+  }
+}
+@-ms-keyframes rotateDots {
+  from {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) skew(10deg, -10deg) rotate(360deg);
+  }
+}
 
 .homePage {
   .jumbotronSection {
-    background: url("/assets/images/lava-lamp-bg.jpg") no-repeat center center;
-    background-size: cover;
+    overflow: hidden;
+    background: $black;
+    height: 100vh;
+    .circle {
+			animation: circleAni 5.5s infinite alternate;
+			-webkit-animation: circleAni 5.5s infinite alternate;
+      width: 350px;
+      height: 350px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      z-index: 20;
+      border: 80px solid $green;
+      border-radius: 50%;
+      opacity: 0.5;
+    }
     .posContainer {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      left: 0;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      left: 50%;
       width: 100%;
+			max-width: 450px;
+			height: 200px;
       padding: 15px;
-      z-index: 10;
+      z-index: 30;
+			.bar {
+				width: 150px;
+				height: 1px;
+				background: $white;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			}
+			.bar.one {
+				transform: translate(-50%, -50%) rotate(-45deg);
+				-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+			}
+			.bar.two {
+				transform: translate(-50%, -50%) rotate(45deg);
+				-webkit-transform: translate(-50%, -50%) rotate(45deg);
+			}
       h1, p {
         color: $white;
       }
       h1 {
-        margin-top: 0;
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2);
         text-transform: uppercase;
+				font-size: 2.0rem;
+				font-weight: 900;
+				margin-top: 155px;	
+				text-align: center;
       }
       p {
         margin-bottom: 0;
+				font-style: italic;
+				font-size: 1.2rem;
+				text-align: center;
       }
+			.letter {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 2rem;
+				color: $white;
+				font-weight: 300;
+			}
+			.letter.one {
+				left: 38%;
+			}
+			.letter.two {
+				right: 38%;
+			}
     }
-  }
-  .jumbotronSection:before {
-    content: "";
-    display: block;
-    padding-top: 130%;
+    .gadUnit {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      width: 340px;
+      height: 70px;
+      background: $black;
+      z-index: 30;
+      padding: 10px;
+    }
+    .gadUnit:before {
+      content: "Advertisement";
+      color: $white;
+      font-size: 1.0rem;
+      position: absolute;
+      top: -17px;
+      left: 0;
+    }
   }
   .jumbotronSection:after {
-    content: "";
+		content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: calc(50% + 15px);
+    transform: translate(-50%, -50%) skew(10deg, -10deg);
+    -webkit-transform: translate(-50%, -50%) skew(10deg, -10deg);
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 0;
+    max-width: 450px;
+    height: 450px;
+    z-index: 10;
+		background: url("/assets/icons/dot-bg.png") repeat center center;
+    animation: rotateDots 25s infinite linear;
+    -webkit-animation: rotateDots 25s infinite linear;
   }
-  .introduction {
-    padding: 45px 0;
-    .heading {
-      padding: 15px;
-      h2 {
-        margin: 0;
-        font-size: 2.0rem;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-    }
-    .segment {
-      padding: 15px;
-      position: relative;
-      .posContainer {
-        p {
-          margin: 0;
-        }
-      }
+  .creativeGrid {
+    .grid.square.one, .grid.square.two,
+    .grid.square.five, .grid.square.six {
+      width: 50%;
+      float: left;
     }
   }
-  .gettingStarted {
-    padding: 45px 15px;
-    background: #ffa500;
-    .posContainer {
-      color: $white;
-      h2 {
-        margin: 0 0 20px;
-        font-size: 2.0rem;
-        text-transform: uppercase;
-        font-weight: 600;
+}
+@media only screen and (min-width: 500px) {
+  .homePage {
+    .creativeGrid {
+      background: $black;
+      .clearfix.rowTwo {
+        display: none;
       }
-      p {
-        margin-bottom: 20px;
+      .group.one, .group.two, .group.three {
+        float: left;
       }
-      .defaultButton {
-        display: block;
-        width: 100%;
+      .group.one, .group.three {
+        width: 25%;
       }
-    }
-  }
-  .quoteBlock {
-    position: relative;
-    background: $black;
-    .posContainer {
-      padding: 60px 15px;
-      text-align: center;
-      p {
-        font-size: 2.0rem;
-        margin-bottom: 0;
-        color: $white;
+      .group.two {
+        width: 50%;
       }
-      .sourceLink {
-        color: $white;
-        border-color: $orange;
-        background: $orange;
-        width: 210px;
-        display: block;
-        margin: 15px auto;
+      .grid.square.five, .grid.square.six, .grid.rectangle.three {
+        float: left;
       }
-    }
-  }
-  article {
-    background: url("/assets/images/banner-bg.png") no-repeat center center;
-    background-size: cover;
-    .borderBoxContainer {
-      max-width: 750px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    .segment {
-      padding: 30px 15px;
-      h2 {
-        font-size: 2.0rem;
-        font-weight: 500;
-        color: $black;
-        margin: 0 0 20px;
+      .grid.square.five, .grid.square.six {
+        width: 25%;
       }
-      p {
-        line-height: 23px;
-        color: $thisGrey;
-        margin-bottom: 15px;
-      }
-      ul.defaultList {
-        margin-bottom: 15px;
-        li {
-          color: $thisGrey;
-          margin-bottom: 30px;
-          line-height: 24px;
-          strong {
-            color: #444;
-            display: block;
-          }
-        }
-        li:last-child {
-          margin-bottom: 0;
-        }
-      }
-      .defaultButton {
-        display: inline-block;
-        margin: 15px 0;
+      .grid.rectangle.three {
+        width: 50%;
       }
     }
   }
 }
-
 @media only screen and (min-width: 768px) {
   .homePage {
     .jumbotronSection {
+			height: 600px;
+      .c1 {
+        width: 550px;
+        height: 550px;
+      }
+      .c2 {
+        width: 470px;
+        height: 470px;
+      }
+      .c3 {
+        width: 390px;
+        height: 390px;
+      }
       .posContainer {
-        max-width: 570px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
+        max-width: 600px;
+        h1 {
+          letter-spacing: 12px;
+        }
       }
     }
-    .jumbotronSection:before {
-      content: "";
-      display: block;
-      padding-top: 60%;
+    .projectSection {
+      padding: 100px 15px;
+      background: $black;
+      .customRow.topRow {
+        .board {
+          .customRow.projectRow {
+            .heading {
+              width: 40%;
+              float: left;
+              margin-right: 10%;
+              margin-bottom: 60px;
+              h2 {
+                color: #333;
+                font-weight: 300;
+                margin-top: 0;
+                margin-bottom: 60px;
+              }
+              p {
+                font-size: 1.2rem;
+                color: $thisGrey;
+                position: relative;
+              }
+              p:before {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: #222;
+              }
+            }
+            .body {
+              width: 50%;
+              float: left;
+              .project {
+                margin-bottom: 70px;
+                h3 {
+                  color: $white;
+                  font-weight: 300;
+                  font-size: 2.0rem;
+                  margin-top: 0;
+                  margin-bottom: 25px;
+                }
+                p {
+                  font-size: 1.3rem;
+                  font-style: italic;
+                  font-family: monospace;
+                  color: $thisGrey;
+                }
+                .defaultButton {
+                  font-size: 1.0rem;
+                  width: 150px;
+                  display: inline-block;
+                  margin-top: 25px;
+                  position: relative;
+                  padding: 0;
+                  color: $green;
+                  span {
+                    display: block;
+                    padding: 0 18px;
+                  }
+                  span:before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-bottom: 1px solid $white;
+                    border-left: 1px solid $white;
+                  }
+                  span:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-bottom: 1px solid $white;
+                    border-right: 1px solid $white;
+                  }
+                }
+                .defaultButton:before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 10px;
+                  height: 10px;
+                  border-top: 1px solid $white;
+                  border-left: 1px solid $white;
+                }
+                .defaultButton:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 10px;
+                  height: 10px;
+                  border-top: 1px solid $white;
+                  border-right: 1px solid $white;
+                }
+                .starGazer {
+                  display: inline-block;
+                  margin-left: 10px;
+                  padding: 2px 10px 5px;
+                  border: 1px solid #444;
+                  .starIcon, .gitIcon {
+                    width: 15px;
+                    display: inline-block;
+                  }
+                  .count {
+                    color: $white;
+                    font-size: 1.3rem;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 3px;
+                  }
+                }
+              }
+              .project:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
     }
-    .introduction {
-      padding: 5% 0;
-      max-width: 768px;
-      margin: 0 auto;
+    .youtubeSection {
+      background: $black;
+      padding: 0 15px 100px;
       .heading {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        width: 50%;
+        width: 40%;
+        margin-left: 58%;
         h2 {
-          font-size: $h2Size;
-          text-align: center;
+          color: #333;
+          font-weight: 300;
+          margin-top: 0;
+          margin-bottom: 30px;
+          text-align: right;
         }
       }
-      .segment {
-        width: 50%;
-        padding: 0;
-        margin-left: auto;
-        .posContainer {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -webkit-transform: translate(-50%, -50%);
-          width: 100%;
-          padding: 15px;
+      .carouselContainer {
+        .carouselItem {
+          padding: 10px;
+          cursor: pointer;
+        }
+        .carouselItem.isLoading {
+          padding: 0;
+        }
+        .carouselItem.isLoading:before {
+          content: "";
+          display: block;
+          padding-top: 100%;
+        }
+        .owl-dots {
+          .owl-dot {
+            span {
+              width: 8px;
+              height: 8px;
+              margin: 5px;
+            }
+          }
+          .owl-dot.active {
+            span {
+              background: $green;
+            }
+          }
         }
       }
-      .segment:before {
-        content: "";
-        display: block;
-        padding-top: 50%;
-      }
-    }
-    .gettingStarted {
-      padding: 90px 15px;
-      .posContainer {
-        max-width: 500px;
-        margin: 0 auto;
-        text-align: center;
-        h2 {
-          font-size: 3.5rem;
-        }
-        .defaultButton {
-          width: 250px;
-          margin: 0 auto;
-        }
-      }
-    }
-    .quoteBlock {
-      .posContainer {
-        padding: 120px 15px;
-        max-width: 550px;
-        margin: 0 auto;
-      }
-    }
-  }
-}
-@media only screen and (min-width: 992px) {
-  .homePage {
-    .jumbotronSection:before {
-      content: "";
-      display: block;
-      padding-top: 46%;
     }
   }
 }
 @media only screen and (min-width: 1200px) {
   .homePage {
     .jumbotronSection {
-      background-attachment: fixed;
-    }
-    .jumbotronSection:before {
-      content: "";
-      display: block;
-      padding-top: 35%;
-    }
-    .introduction, .gettingStarted {
-      margin: 0;
-      width: 50%;
-      max-width: 50%;
-      height: 475px;
-      float: left;
-    }
-    .gettingStarted {
-      padding: 0;
+			height: 100vh;
       .posContainer {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 420px;
+        max-width: 850px;
       }
     }
-    article {
-      background-attachment: fixed;
+    .projectSection {
+      padding: 130px 15px;
+      .customRow.topRow {
+        width: 95%;
+        margin: 0 auto;
+        .board {
+          .customRow.projectRow {
+            .heading {
+              h2 {
+                font-size: 5.0rem;
+              }
+              p {
+                font-size: 1.3rem;
+              }
+            }
+            .body {
+              .project {
+                margin-bottom: 100px;
+                .defaultButton {
+                  span:before, span:after {
+                    @include app-transition(all, 0.8s, ease);
+                  }
+                }
+                .defaultButton:before, .defaultButton:after {
+                  @include app-transition(all, 0.8s, ease);
+                }
+                .defaultButton:hover {
+                  span:before, span:after {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                .defaultButton:hover:before, .defaultButton:hover:after {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+          .vidBlock {
+            margin-bottom: 15px;
+          }
+          .vidBlock:before {
+            content: "";
+            display: block;
+            padding-top: 80%;
+          }
+        }
+        .board:first-child {
+          width: 77%;
+          float: left;
+          margin-right: 5%;
+        }
+      }
+    }
+    .youtubeSection {
+      .heading {
+        h2 {
+          font-size: 5.0rem;
+        }
+      }
+      .carouselContainer {
+        max-width: 95%;
+        margin: 0 auto;
+      }
     }
   }
 }

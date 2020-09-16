@@ -1,7 +1,7 @@
 {
-  "name": "jekyll-lava-boilerplate",
-  "version": "3.1.1",
-  "description": "A really simple project that serves as a boiler plate for developers building front end websites with Jekyll. Basic documentation available to help understand how this works.",
+  "name": "sricharan-krishnan-github-io",
+  "version": "2.0.0",
+  "description": "Sricharan Krishnan | The Aspiring Builder, Student of the Art, Developer Underdog - This is just me. A web developer who's got a unique background. I Work. I Build. I Code. I'm Still Learning.",
   "main": "index.js",
   "scripts": {
     "cleanup": "rm -v ./CODE_OF_CONDUCT.md ./CONTRIBUTING.md ./LICENSE ./googleac250e85da349e6d.html && git remote remove origin",
@@ -12,41 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sricharankrishnan/jekyll-lava-boilerplate.git",
+    "url": "https://github.com/sricharankrishnan/sricharankrishnan.github.io",
     "private": true
   },
-  "keywords": [
-    "jekyll",
-    "jekyll",
-    "boilerplate",
-    "jekyll",
-    "boilerplate",
-    "template",
-    "jekyll",
-    "development",
-    "environment",
-    "jekyll",
-    "lava",
-    "boilerplate",
-    "jekyll",
-    "lava",
-    "jekyll",
-    "website",
-    "builder",
-    "jekyll",
-    "website",
-    "examples",
-    "jekyll",
-    "project",
-    "jekyll",
-    "environment",
-    "how",
-    "to"
-  ],
-  "author": "Sricharan Krishnan | https://github.com/sricharankrishnan/ | sricharan.krishnan@gmail.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sricharankrishnan/jekyll-lava-boilerplate/issues"
-  },
-  "homepage": "https://github.com/sricharankrishnan/jekyll-lava-boilerplate#readme"
+  "keywords": [],
+  "author": "Sricharan Krishnan | https://github.com/sricharankrishnan/ | sricharan.krishnan@gmail.com"
 }
