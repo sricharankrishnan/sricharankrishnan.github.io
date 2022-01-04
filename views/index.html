@@ -8,182 +8,28 @@ bodyClass: homePage
 stylesheet: "home-page.css"
 jsfile: "main.js"
 ---
-<!--jumbotron section starts here-->
-<div class="jumbotronSection positionRelative" data-mp4="/assets/videos/jumbotron-video-bg.mp4" data-webm="/assets/videos/jumbotron-video-bg.webm"
-id="jumbotronSection">
-  <span class="circle"></span>
-
-  <!--pos container-->
+<!-- jumbotron cover -->
+<div class="jumbotronSection positionRelative" id="jumbotronSection"
+data-mp4="/assets/videos/jumbotron-video-bg.mp4"
+data-webm="/assets/videos/jumbotron-video-bg.webm">
   <div class="posContainer">
-    <span class="bar one"></span>
-    <span class="bar two"></span>
-    <span class="letter one">S</span>
-    <span class="letter two">K</span>
+    <img src="https://avatars.githubusercontent.com/u/19187230?v=4" 
+    class="img-responsive center-block" alt="Sricharan Krishnan" title="Sricharan Krishnan"/>
     <h1>Sricharan Krishnan</h1>
-    <p>Web Developer // The Aspiring Builder // Developer Underdog</p>
+    <p>The Aspiring Builder // Student of the Art of Code // <br class="hidden-xs"/>Developer Underdog</p>
   </div>
-
-  <!--gad unit-->
-  <div class="gadUnit visible-lg">
-		<style>
-			.jumboAd {
-				margin: 0 auto;
-			}
-		</style>
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Ad Space Small -->
-		<ins class="adsbygoogle jumboAd"
-				 style="display:block;width:320px;height:50px"
-				 data-ad-client="ca-pub-7129312127229999"
-				 data-ad-slot="9512353977"></ins>
-		<script>
-				 (adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
+  <span class="circle"></span>
+  <span class="email">sricharan.krishnan@gmail.com</span>
+  <div class="github">
+    <a href="https://github.com/sricharankrishnan">
+      <img src="/assets/icons/github-icon.svg" class="img-responsive" alt="Github - Sricharan Krishnan" title="Github - Sricharan Krishnan"/>
+      <span class="hidden-xs">https://github.com/sricharankrishnan</span>
+    </a>
+  </div>
+  <div class="linkedIn">
+    <a href="https://in.linkedin.com/in/sricharan-krishnan">
+      <img src="/assets/icons/linkedin-icon.svg" class="img-responsive" alt="LinkedIn - Sricharan Krishnan" title="LinkedIn - Sricharan Krishnan"/>
+      <span class="hidden-xs">https://in.linkedin.com/in/sricharan-krishnan</span>
+    </a>
   </div>
 </div>
-<!--jumbotron section ends here-->
-
-<!--project section-->
-<div class="projectSection hidden-xs" data-hasloaded="false" id="projectSection">
-  <div class="customRow topRow">
-    <div class="board">
-      <div class="customRow projectRow">
-        <div class="heading">
-          <h2>my open source projects and work available for you to see</h2>
-          <p>Supporting my projects with a star would go a long way in motivating me to build more</p>
-        </div>
-        <div class="body">
-          {% for project in site.data.projects %}
-            <div class="project" data-stargazers="{{ project.stargazers }}">
-              <h3>{{ project.name }}</h3>
-              <p>{{ project.description }}</p>
-              <a href="{{ project.link }}" class="defaultButton primaryButton"><span>View Project</span></a>
-              <a href="{{ project.link }}" class="starGazer hide">
-                <img src="/assets/icons/star.svg" class="img-responsive starIcon" alt="Stars" title="Stars"/>
-                <img src="/assets/icons/github-icon.svg" class="img-responsive gitIcon" alt="Github" title="Github"/>
-                <span class="count">0 Stars</span>
-              </a>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!--project section-->
-
-<!--youtube section-->
-<div class="youtubeSection hidden-xs" data-hasloaded="false" id="youtubeSection">
-	<!--header-->
-  <div class="heading">
-    <h2>things i like and usually watch on youtube</h2>
-  </div>
-
-	<!--body-->
-  <div class="carouselContainer owl-carousel owl-theme" id="o2Unit">
-    <!--1-->
-    <div class="carouselItem isLoading" data-img="/assets/images/yt-section/star-trek-first-contact.jpg"
-    data-imgname="Star Trek: First Contact - I Am The Borg(1996) HD" data-video="https://www.youtube.com/embed/sMt3SzAH_i0"></div>
-    <!--2-->
-    <div class="carouselItem isLoading" data-img="/assets/images/yt-section/doom-4.jpg"
-    data-imgname="DOOM 4 GAMEPLAY 60FPS 1080p - Doom Gameplay Trailer" data-video="https://www.youtube.com/embed/CQpxDFExwhU"></div>
-    <!--3-->
-    <div class="carouselItem isLoading" data-img="/assets/images/yt-section/martian-winter.png"
-    data-imgname="ANGEL VIVALDI // A Martian Winter [OFFICIAL MUSIC VIDEO]" data-video="https://www.youtube.com/embed/qFWoIyqSjlA"></div>
-    <!--4-->
-    <div class="carouselItem isLoading" data-img="/assets/images/yt-section/orianthi.jpg"
-    data-imgname="Orianthi - Voodoo Child" data-video="https://www.youtube.com/embed/mK6tcgsKgps"></div>
-    <!--5-->
-    <div class="carouselItem isLoading" data-img="/assets/images/yt-section/metallica-snm.jpg"
-    data-imgname="Sad But True - Metallica & San Francisco Symphonic Orchestra" data-video="https://www.youtube.com/embed/RaCPMiB41f8"></div>
-    <!--6-->
-    <div class="carouselItem isLoading" data-img="/assets/images/yt-section/dow-3.jpg" 
-    data-imgname="Warhammer 40,000: Dawn of War III - Announcement Trailer" data-video="https://www.youtube.com/embed/gN8geCTlZOo"></div>
-  </div>
-	
-	<!--gad unit-->
-	<div class="gadUnit visible-sm visible-md">
-		<style>
-			.ytAdTab {
-				margin: 15px auto 0;
-			}
-		</style>
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Ad Space Lg -->
-		<ins class="adsbygoogle ytAdTab"
-				 style="display:block;width:728px;height:90px"
-				 data-ad-client="ca-pub-7129312127229999"
-				 data-ad-slot="4028246948"></ins>
-		<script>
-				 (adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-	</div>
-	
-	<!--gad unit-->
-	<div class="gadUnit visible-lg">
-		<style>
-			.ytAdDesktop {
-				margin: 15px auto 0;
-			}
-		</style>
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Panorama Ad 980 x 120 -->
-		<ins class="adsbygoogle ytAdDesktop"
-				 style="display:block;width:980px;height:120px"
-				 data-ad-client="ca-pub-7129312127229999"
-				 data-ad-slot="9145256539"></ins>
-		<script>
-				 (adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
-	</div>
-</div>
-<!--youtube section-->
-
-<!--creative grid-->
-<div class="creativeGrid">
-  <!--first row-->
-  <div class="customRow">
-    <div class="group one">
-      <div class="grid rectangle one">
-        <img src="/assets/images/grid/grid-rect-1.jpg" class="img-responsive center-block" alt="I was wearing one of these a long time ago!" title="I was wearing one of these a long time ago!"/>
-      </div>
-    </div>
-    <div class="group two">
-      <div class="grid rectangle two">
-        <img src="/assets/images/grid/grid-rect-2.jpg" class="img-responsive center-block" alt="Hmm eyes on the Chocolate Flavour" title="Hmm eyes on the Chocolate Flavour"/>
-      </div>
-      <div class="customRow">
-        <div class="grid square one">
-          <img src="/assets/images/grid/grid-square-1.jpg" class="img-responsive center-block" alt="A Tea Party" title="A Tea Party"/>
-        </div>
-        <div class="grid square two">
-          <img src="/assets/images/grid/grid-square-2.jpg" class="img-responsive center-block" alt="OMG! You know what this is..." title="OMG! You know what this is..."/>
-        </div>
-      </div>
-    </div>
-    <div class="group three">
-      <div class="grid square three">
-        <img src="/assets/images/grid/grid-square-3.jpg" class="img-responsive center-block" alt="Spiritual" title="Spiritual"/>
-      </div>
-      <div class="grid square four">
-        <img src="/assets/images/grid/grid-square-4.jpg" class="img-responsive center-block" alt="Home Food" title="Home Food"/>
-      </div>
-    </div>
-  </div>
-  <!--first row-->
-  <!--last row-->
-  <div class="customRow">
-    <div class="grid square five">
-      <img src="/assets/images/grid/grid-square-5.jpg" class="img-responsive center-block" alt="Smaug!" title="Smaug!"/>
-    </div>
-    <div class="grid square six">
-      <img src="/assets/images/grid/grid-square-6.jpg" class="img-responsive center-block" alt="The Orange Cat" title="The Orange Cat"/>
-    </div>
-    <div class="clearfix rowTwo"></div>
-    <div class="grid rectangle three">
-      <img src="/assets/images/grid/grid-rect-3.jpg" class="img-responsive center-block" alt="Old Indian Currency" title="Old Indian Currency"/>
-    </div>
-  </div>
-  <!--last row-->
-</div>
-<!--creative grid-->

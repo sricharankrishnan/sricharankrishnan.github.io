@@ -53,23 +53,11 @@ layout: compress
     <!--Custom No Script Tag for Javascript Disabled-->
 
     <div class="appRoot" id="appRoot">
-      <!--Website Header Details Starts Here-->
-      <nav style="display:none">
-        {% include app-header.html %}
-      </nav>
-      <!--Website Header Details Ends Here-->
-
       <!--Main Webiste Content Details Starts Here-->
       <main>
       {{ content }}
       </main>
       <!--Main Website Content Details Ends Here-->
-      
-      <!--Website Footer Details Starts Here-->
-      <footer>
-        {% include app-footer.html %}
-      </footer>
-      <!--Website Footer Details Ends Here-->
     </div>
 
     <!--Web Font Loader Details Starts Here-->
@@ -78,7 +66,9 @@ layout: compress
     <script>
       var __thisAppFontSetup = {
         google: {
-          families: ["Noto Sans KR:300,400,500,700,900"]
+          families: [
+            "IBM Plex Sans Condensed:500;600;700",
+          ]
         }
       };
       WebFont.load(__thisAppFontSetup);
