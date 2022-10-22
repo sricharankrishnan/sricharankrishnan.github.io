@@ -4,45 +4,20 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.title }}</title>
+    <!-- [meta info] -->
+    {% include app-meta/index.html %}
+    <!-- [meta info] -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page.metaDescription }}"/>
-    <meta name="robots" content="index,follow"/>
-    <meta name="keywords" content="{{ page.metaKeywords }}"/>
-
-    <meta name="trustpilot-one-time-domain-verification-id" content="741d23d8-7f5a-45c7-aefd-79d5c6d5ae2b"/>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!--Relbase Url File Details Starts Here-->
-    {% include rel-base.html %}
-    <!--Relbase Url File Details Ends Here-->
-
-    {% if page.url == "/404.html" %}
-    <!--404 Redirection Details Starts Here-->
-    <meta http-equiv="refresh" content="30; url=/">
-    <!--404 Redirection Details Ends Here-->
-    {% endif %}
-    
-    <!--Favicon Details Starts Here-->
-    <link href="{{ relBase }}assets/icons/favicon-image.png" rel="shortcut icon" type="image/png"/>
-    <!--Favicon Details Ends Here-->
-		
-    <!--Stylesheet Requirements Starts Here-->
-    <link href="{{ relBase }}assets/css/vendor-components/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
-    <link href="{{ relBase }}assets/css/vendor-components/owl.theme.default.min.css" rel="stylesheet" type="text/css"/>
-    <link href="{{ relBase }}assets/css/{{ page.stylesheet }}" rel="stylesheet" type="text/css"/>
-		<!--Stylesheet Requirements Ends Here-->
+    <!-- [critical inline css] -->
+    <style type="text/css">
+    {% capture criticalRender %}
+      {% include initial-render.scss %}
+    {% endcapture %}
+    {{ criticalRender | scssify }}
+    </style>
+    <!-- [critical inline css] -->
   </head>
-  <body class="{{ page.bodyClass }}">
+  <body class="{{ page.bodyClass }}" id="{{ page.bodyId }}">
     <!--Custom No Script Tag for Javascript Disabled-->
     <noscript>
       <div class="noscriptDiv">
@@ -53,41 +28,48 @@ layout: compress
       </div>
     </noscript>
     <!--Custom No Script Tag for Javascript Disabled-->
+    
+    <!-- [app loader] -->
+    {% include app-loader/index.html %}
+    <!-- [app loader] -->
 
-    <div class="appRoot" id="appRoot">
-      <!--Main Webiste Content Details Starts Here-->
-      <main>
-      {{ content }}
-      </main>
-      <!--Main Website Content Details Ends Here-->
+    <div class="appRoot hide" id="appRoot">
+      <!-- [app nav partial] -->
+      <nav>{% include app-nav/index.html %}</nav>
+      <!-- [app nav partial] -->
+
+      <!-- [main content] -->
+      <main>{{ content }}</main>
+      <!-- [main content] -->
+      
+      <!-- [app footer partial]-->
+      <footer>{% include app-footer/index.html %}</footer>
+      <!-- [app footer partial]-->
     </div>
 
-    <!--Web Font Loader Details Starts Here-->
-    <!--Refer Web Font Loader Github Page @ https://github.com/typekit/webfontloader -->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-      var __thisAppFontSetup = {
-        google: {
-          families: [
-            "IBM Plex Sans Condensed:500;600;700",
-          ]
-        }
-      };
-      WebFont.load(__thisAppFontSetup);
+    <!-- [app fonts config] -->
+    {% include app-webfonts/index.html %}
+    <!-- [app fonts config] -->
+    
+    <!-- [js file timestamp] -->
+    <script type="text/javascript">
+      var serveFileVer = "?serveFileVer=20032022_1722";
     </script>
-    <!--Web Font Loader Details Ends Here-->
+    {% assign serveFileVer = "20032022_1722" %}
+    <!-- [js file timestamp] -->
 
-		<!--Javascript Requirements Starts Here-->
-    <!--
-      We're making a call to google for the jquery file. Just in case, there is a backup copy of jquery version 3.3.1 
-      saved in ./js/lib-files directory for you!
-    -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-    <script src="{{ relBase }}assets/js/vendor-components/bootstrap/bootstrap.min.js"></script>
-    <script src="{{ relBase }}assets/js/vendor-components/html-5-video/index.js"></script>
-    <script src="{{ relBase }}assets/js/vendor-components/owl-carousel-2/owl.carousel.min.js"></script>
-    <script src="{{ relBase }}assets/js/vendor-components/youtube-overlay/youtube-overlay.js" type="text/javascript"></script>
-    <script src="{{ relBase }}assets/js/{{ page.jsfile }}" type="text/javascript"></script>
-    <!--Javascript Requirements Ends Here-->
+    <!-- [javascript files] -->
+    {% assign mode = "development" %}
+    {% if mode == "development" and page.jsfile != "" %}
+      <script src="/assets/js/vendor-components/jquery/jquery-3.3.1.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+      <script src="/assets/js/vendor-components/jquery/jquery.cookie.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+      <script src="/assets/js/vendor-components/bootstrap/bootstrap.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+      <script src="/assets/js/common.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+      <script src="/assets/js/{{ page.jsfile }}.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+    {% endif %}
+    {% if mode == "production" and page.jsfile != "" %}
+      <script src="/assets/js/{{ page.jsfile}}.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+    {% endif %}
+    <!-- [javascript files] -->
   </body>
 </html>

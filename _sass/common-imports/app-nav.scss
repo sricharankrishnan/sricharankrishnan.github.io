@@ -1,0 +1,19 @@
+@import "common-imports/variables.scss";
+
+.navParent {
+  padding: 20px;
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 1.2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  .borderBoxContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    img {
+      width: 20px;
+      display: inline-block;
+      margin-right: 7px;
+    }
+  }
+}

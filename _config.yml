@@ -1,6 +1,6 @@
 # Configuraton File #
 #===================#
-title: Jekyll Lava Boiler Plate
+title: Jekyll Arabica Boilerplate
 email: sricharan.krishnan@gmail.com
 github_username: sricharankrishnan (https://github.com/sricharankrishnan/)
 
@@ -29,3 +29,16 @@ permalink: /:categories/:title/
 
 sass:
   style: compressed
+
+# Default Front Matter
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      title: "Sricharan Krishnan | Software Developer"
+      metaDescription: "The Aspiring Builder/Student of the Art of Code/Developer Underdog/"
+      metaKeywords: "sricharan krishnan, sricharan, aspiring builder, developer underdog, builder"
+

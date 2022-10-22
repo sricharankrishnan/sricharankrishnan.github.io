@@ -1,0 +1,70 @@
+@import "common-imports/variables";
+
+body {
+  font-size: $baseFontSize;
+  font-weight: 400;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  color: $black;
+  .appRoot {
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .appRoot.restrictScrollActive {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .appLoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background: $black;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      width: 100px;
+    }
+  }
+  .noscriptDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1500;
+    background: $linkBlue; 
+    .posContainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 450px;
+      font-family: monospace;
+      p {
+        color: $white;
+        font-size: $baseFontSize/1.1;
+      }
+      p:first-child {
+        font-size: 5.0rem;
+        font-weight: 900;
+      }
+    }
+  }
+}
+div {
+  box-sizing: border-box;
+}
+.hide {
+  display: none !important;
+}
+

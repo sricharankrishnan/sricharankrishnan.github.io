@@ -1,20 +1,33 @@
 {
-  "name": "sricharan-krishnan-github-io",
-  "version": "2.0.0",
-  "description": "Sricharan Krishnan | The Aspiring Builder, Student of the Art, Developer Underdog - This is just me. A web developer who's got a unique background. I Work. I Build. I Code. I'm Still Learning.",
+  "name": "jekyll-arabica-boilerplate",
+  "version": "1.0.0",
+  "description": "A really simple project that serves as a boiler plate for developers building front end websites with Jekyll.",
   "main": "index.js",
   "scripts": {
-    "cleanup": "rm -v ./CODE_OF_CONDUCT.md ./CONTRIBUTING.md ./LICENSE ./googleac250e85da349e6d.html && git remote remove origin",
-    "dev": "bundle exec jekyll serve --watch --trace",
-    "devhost": "bundle exec jekyll serve --watch --host=0.0.0.0 --trace",
-    "hotreload": "bundle exec jekyll serve --livereload --host=0.0.0.0 --trace",
-    "build": "bundle exec jekyll build --trace"
+    "start": "bundle exec jekyll serve --watch",
+    "devhost": "bundle exec jekyll serve --watch --host=0.0.0.0",
+    "hotreload": "bundle exec jekyll serve --livereload --host=0.0.0.0",
+    "build": "bundle exec jekyll build",
+    "production": "python grunt_all.py"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sricharankrishnan/sricharankrishnan.github.io",
-    "private": true
+  "author": {
+    "name": "Sricharan Krishnan (https://github.com/sricharankrishnan)",
+    "email": "sricharan.krishnan@gmail.com",
+    "url": "https://sricharankrishnan.github.io/"
   },
-  "keywords": [],
-  "author": "Sricharan Krishnan | https://github.com/sricharankrishnan/ | sricharan.krishnan@gmail.com"
+  "keywords": [
+    "jekyll",
+    "jekyll boilerplate",
+    "jekyll arabica boilerplate",
+    "jekyll websites"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-postcss": "^0.9.0",
+    "grunt-responsive-images": "^1.10.1"
+  }
 }

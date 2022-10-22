@@ -1,0 +1,61 @@
+/*
+  This is the common stylesheet. Place any/all styles that are applicable
+  across your web app.
+
+  This file imports bootstrap 3.x version into it. You can now
+  import this particular file into a css file required to handle
+  per page. 
+*/
+@import "common-imports/variables.scss";
+@import "vendor-components/bootstrap/stylesheets/bootstrap-sprockets";
+@import "vendor-components/bootstrap/stylesheets/_bootstrap"; 
+
+body {
+  font-family: $bodyFont;
+  font-size: $baseFontSize;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: $headingFont;
+}
+h1 {
+  font-size: $h1Size;
+}
+h2 {
+  font-size: $h2Size;
+}
+h3 {
+  font-size: $h3Size;
+}
+h4 {
+  font-size: $h4Size;
+}
+a {
+  color: $linkBlue;
+}
+a:hover {
+  text-decoration: none;
+}
+.positionRelative {
+  position: relative;
+}
+.customRow:before, .customRow:after {
+  display: table;
+  content: "";
+}
+.customRow:after {
+  clear: both;
+}
+.defaultButton {
+  @include buttonReset();
+}
+.defaultButton.primaryButton {
+  background: $black;
+  border-color: $black;
+  color: $white;
+}
+.defaultButton.secondaryButton {
+  background: $white;
+  color: $black;
+  border-color: $black;
+}

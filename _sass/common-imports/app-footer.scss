@@ -1,0 +1,16 @@
+@import "common-imports/variables.scss";
+
+.footerParent {
+  background: $black;
+  padding: 19px 20px;
+  p {
+    color: $white;
+    margin: 0;
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footerParent {
+    padding: 20px;
+  }
+}

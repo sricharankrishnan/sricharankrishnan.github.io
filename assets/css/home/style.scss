@@ -1,0 +1,151 @@
+---
+#Front End Matter Initialization - Do Not Delete This
+---
+@import "common.scss";
+@import "common-imports/app-nav.scss";
+@import "common-imports/app-footer.scss";
+
+.homePage {
+  .jumbotronSection {
+    padding: 80px 20px;
+    h1 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 2.7rem;
+      color: $black;
+    }
+    .subTitle {
+      font-size: 1.8rem;
+      line-height: 25px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+    .customRow {
+      .heroImage {
+        max-width: 80%;
+        border-radius: 50%;
+      }
+    }
+    .meta {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      li {
+        display: inline-block;
+        margin: 0 4px;
+        a {
+          display: block;
+          img {
+            width: 30px;
+          }
+          .linkedIn {
+            width: 35px;
+          }
+        }
+      }
+    }
+    .email {
+      font-size: 1.2rem;
+      line-height: 19px;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .homePage {
+    .jumbotronSection {
+      max-width: 700px;
+      margin: 0 auto;
+      h1 {
+        font-size: 4.5rem;
+      }
+      .subTitle {
+        margin-bottom: 80px;
+      }
+      .customRow {
+        .segment {
+          width: 25%;
+          float: left;
+          .item {
+            margin-bottom: 40px;
+            padding: 10px 15px;
+            h2 {
+              margin-top: 0;
+              margin-bottom: 15px;
+              font-size: 1.1rem;
+              font-family: $bodyFont;
+              font-weight: 500;
+              line-height: 18px;
+              text-transform: uppercase;
+              color: $thisGrey;
+            }
+            p {
+              font-size: 1.2rem;
+              line-height: 22px;
+              color: $black;
+              font-family: $headingFont;
+            }
+          }
+        }
+        .segment.right {
+          text-align: right;
+          .item {
+            p {
+              .largeNum {
+                font-size: 4.0rem;
+                line-height: 40px;
+              }
+            }
+          }
+        }
+        .heroImage {
+          width: 50%;
+          float: left;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .homePage {
+    .jumbotronSection {
+      max-width: 900px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .homePage {
+    .jumbotronSection {
+      max-width: 1100px;
+      .customRow {
+        .segment {
+          width: 20%;
+        }
+        .segment.left {
+          .item {
+            padding-left: 0;
+          }
+        }
+        .segment.right {
+          .item {
+            padding-right: 0;
+          }
+        }
+        .heroImage {
+          margin-left: 5%;
+          margin-right: 5%;
+          box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+          -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+        }
+      }
+      .meta {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .emailIcon {
+        width: 60px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
