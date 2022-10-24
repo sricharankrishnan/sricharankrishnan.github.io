@@ -4,11 +4,11 @@
 
   This file imports bootstrap 3.x version into it. You can now
   import this particular file into a css file required to handle
-  per page. 
+  per page.
 */
 @import "common-imports/variables.scss";
 @import "vendor-components/bootstrap/stylesheets/bootstrap-sprockets";
-@import "vendor-components/bootstrap/stylesheets/_bootstrap"; 
+@import "vendor-components/bootstrap/stylesheets/_bootstrap";
 
 body {
   font-family: $bodyFont;

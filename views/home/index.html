@@ -5,7 +5,7 @@ bodyId: homePage
 jsfile: "home/index"
 ---
 <!--jumbotron section starts here-->
-<div class="jumbotronSection positionRelative" id="jumbotronSection">
+<section class="jumbotronSection positionRelative" id="jumbotronSection">
   <!-- intro -->
   <h1 class="text-center">Sricharan Krishnan</h1>
   <p class="text-center subTitle">Software Developer <br/>Based in Chennai, Tamil Nadu</p>
@@ -67,5 +67,44 @@ jsfile: "home/index"
   <img src="/assets/icons/email-envelope-icon.gif" class="img-responsive center-block emailIcon visible-lg"
   alt="Srichran Krishnan | Email Address" title="Sricharan Krishnan | Email Address"/>
   <p class="text-center email">sricharan.krishnan@gmail.com</p>
-</div>
+</section>
 <!--jumbotron section ends here-->
+
+<!-- contact me -->
+<section class="contactMeParent" id="contactMeParent">
+  <div class="borderBoxContainer">
+    <img src="/assets/icons/sofa-icon.gif" class="img-responsive helloIcon"
+    alt="Hello!" title="Love To Hear From You. Get In Touch"/>
+    <h3>Love To Hear From You. <br class="hidden-xs"/>Get In Touch</h3>
+
+    <!-- form -->
+    <form class="form" id="contactMeForm">
+      <div class="customRow">
+        <div class="form-group positionRelative email">
+          <label for="contactEmail">Your Email*</label>
+          <input type="email" class="form-control" name="contactEmail" id="contactEmail"/>
+          <span class="highlight"></span>
+          <span class="error">?</span>
+        </div>
+        <div class="form-group positionRelative number">
+          <label for="contactNumber">Your Number (Optional)</label>
+          <input type="email" class="form-control" name="contactNumber" id="contactNumber"/>
+          <span class="highlight"></span>
+          <span class="error">?</span>
+        </div>
+      </div>
+      <div class="form-group positionRelative">
+        <label for="contactMessage">Your Message*</label>
+        <textarea rows="5" class="form-control" name="contactMessage" id="contactMessage"></textarea>
+        <span class="highlight"></span>
+        <span class="error">?</span>
+      </div>
+      <button class="defaultButton primaryButton submitBtn" type="submit" id="submitButton">
+        <span class="text">Just Send</span>
+        <img src="/assets/icons/button-spinner.gif" class="img-responsive center-block spinner"
+        alt="Processing..." title="Processing..."/>
+      </button>
+    </form>
+  </div>
+</section>
+<!-- contact me -->
