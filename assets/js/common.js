@@ -138,6 +138,28 @@ ThisApp.prototype.checkWebpSupport = function(callback) {
     }
   };
 };
+/* creates a snackbar alert */
+ThisApp.prototype.createSnackBar = function(message, typeString) {
+  this.hideSnackBars();
+
+  /* create */
+  var snackbar = $('<span></span>');
+  snackbar.attr("class", "alert snackbar " + typeString);
+  snackbar.html(message);
+  $("body").append(snackbar);
+  this.hideSnackBars();
+};
+ThisApp.prototype.hideSnackBars = function() {
+  if ($(".snackbar").length > 0) {
+    var bars = $(".snackbar");
+    setTimeout(function() {
+      bars.addClass("dismiss");
+      setTimeout(function() {
+        bars.remove();
+      }, 300);
+    }, 5000);
+  }
+};
 
 function centralControl() {
   /* always first */

@@ -75,6 +75,13 @@
           $this.showProcessing();
           $this.sendDataForStorage(contactFormData, function(response) {
             $this.hideProcessing();
+            if (response.success === true) {
+              $this.sendSuccessAlert();
+              $this.resetContactForm();
+            }
+            else {
+              $this.sendFailAlert();
+            }
           });
         }
         else {
@@ -102,6 +109,14 @@
         console.error(error);
         callback({success: false});
       });
+    };
+    /* snackbar alert - success */
+    Constructor.prototype.sendSuccessAlert = function() {
+      thisapp.createSnackBar("Thank You! I've Got Your Message.", "alert-success")
+    };
+    /* snackbar alert - success */
+    Constructor.prototype.sendFailAlert = function() {
+      thisapp.createSnackBar("Sorry. Try Again?", "alert-danger")
     };
     /* creates the form data */
     Constructor.prototype.createFormData = function() {
@@ -140,6 +155,11 @@
     Constructor.prototype.hideProcessing = function() {
       var $this = this;
       $this.form.find("#submitButton").removeClass("processing");
+    };
+    /* resets the form */
+    Constructor.prototype.resetContactForm = function() {
+      var $this = this;
+      $this.form.trigger("reset");
     };
 
     return Constructor;
