@@ -161,9 +161,46 @@ ThisApp.prototype.hideSnackBars = function() {
   }
 };
 
+var AppSoundEffects = (function() {
+  function Constructor() {
+    this.buttonClickSound = "/assets/audio/button-click-sound-effect.mp3";
+    this.okSound = "/assets/audio/ok-sound.mp3";
+    this.errorSound = "/assets/audio/error-sound.mp3";
+    this.linkClickSound = "/assets/audio/link-click-sound.mp3";
+    this.init();
+  }
+  Constructor.prototype.init = function() {
+    var $this = this;
+    $this.linkClickHandler();
+  };
+  Constructor.prototype.linkClickHandler = function() {
+    var $this = this;
+    $("a").on("click", function() {
+      $this.playSound($this.linkClickSound);
+    });
+  };
+  Constructor.prototype.playSound = function(sound) {
+    var audio = new Audio(sound);
+    audio.play();
+  };
+  Constructor.prototype.playButtonClick = function() {
+    this.playSound(this.buttonClickSound);
+  };
+  Constructor.prototype.playOkSound = function() {
+    this.playSound(this.okSound);
+  };
+  Constructor.prototype.playErrorSound = function() {
+    this.playSound(this.errorSound);
+  };
+
+  return Constructor;
+})();
+
+
 function centralControl() {
   /* always first */
   window.thisapp = new ThisApp();
   thisapp.init();
+  window.appSounds = new AppSoundEffects();
 }
 centralControl();

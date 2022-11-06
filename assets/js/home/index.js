@@ -58,6 +58,7 @@
       $this.form.on("submit", function(event) {
         event.preventDefault();
         $this.hideFormErrors();
+        appSounds.playButtonClick();
 
         /* state for validatation */
         var validation = {
@@ -78,9 +79,11 @@
             if (response.success === true) {
               $this.sendSuccessAlert();
               $this.resetContactForm();
+              appSounds.playOkSound();
             }
             else {
               $this.sendFailAlert();
+              appSounds.playErrorSound();
             }
           });
         }
