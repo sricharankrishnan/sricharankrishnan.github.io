@@ -28,7 +28,7 @@ layout: compress
       </div>
     </noscript>
     <!--Custom No Script Tag for Javascript Disabled-->
-    
+
     <!-- [app loader] -->
     {% include app-loader/index.html %}
     <!-- [app loader] -->
@@ -41,7 +41,7 @@ layout: compress
       <!-- [main content] -->
       <main>{{ content }}</main>
       <!-- [main content] -->
-      
+
       <!-- [app footer partial]-->
       <footer>{% include app-footer/index.html %}</footer>
       <!-- [app footer partial]-->
@@ -50,7 +50,7 @@ layout: compress
     <!-- [app fonts config] -->
     {% include app-webfonts/index.html %}
     <!-- [app fonts config] -->
-    
+
     <!-- [js file timestamp] -->
     <script type="text/javascript">
       var serveFileVer = "?serveFileVer=20032022_1722";
@@ -64,6 +64,7 @@ layout: compress
       <script src="/assets/js/vendor-components/jquery/jquery-3.3.1.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
       <script src="/assets/js/vendor-components/jquery/jquery.cookie.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
       <script src="/assets/js/vendor-components/bootstrap/bootstrap.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
+      <script src="/assets/js/vendor-components/owl-carousel-2/owl.carousel.min.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
       <script src="/assets/js/common.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
       <script src="/assets/js/{{ page.jsfile }}.js?serveFileVer={{ serveFileVer }}" type="text/javascript"></script>
     {% endif %}

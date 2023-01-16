@@ -9,7 +9,7 @@ jsfile: "home/index"
   <div class="customRow top positionRelative">
     <!-- intro -->
     <div class="segment">
-      <h1>I'm Sricharan Krishnan</h1>
+      <h1>I'm <br class="visible-lg"/>Sricharan Krishnan</h1>
       <p class="subTitle">Software Developer <br/>Based in Chennai, Tamil Nadu</p>
       <div class="followParent">
         <span class="followMeText">Follow Me:</span>
@@ -78,6 +78,49 @@ jsfile: "home/index"
   </div>
 </section>
 <!--jumbotron section ends here-->
+
+<!-- favorite things -->
+<section class="favoriteThings">
+  <div class="borderBoxContainer">
+    <p class="text">
+      these are things that i love about human life.
+    </p>
+    <p class="things">
+      <span class="odd">Pasta.</span>
+      <span class="even">Chocolate Brownies.</span>
+      <span class="odd">Star Trek.</span>
+      <span class="even">Good Chinese Food.</span>
+      <span class="odd">Dark Chocolate.</span>
+      <span class="even">Meditation.</span>
+      <span class="odd">Rock Music.</span>
+      <span class="even">Lamborginis.</span>
+    </p>
+  </div>
+</section>
+
+<!-- skills -->
+<div class="skillsParent">
+  <div class="borderBoxContainer">
+    <img src="/assets/icons/code-icon.gif" class="img-responsive codeIcon"
+    alt="Technical Skills" title="Technical Skills"/>
+    <h2>My Skills and Technical <br class="hidden-xs"/>Know Hows</h3>
+
+    <p class="introText">Data Structures: </p>
+    <div class="dsaCarousel owl-carousel owl-theme" id="dsaCarousel">
+      {% assign dsList = site.data.ds-list %}
+      {% for ds in dsList %}
+        <div class="item">
+          <img src="{{ ds.icon }}" class="img-responsive center-block"/>
+          <div class="text">
+            <h3>{{ ds.title }}</h3>
+            <p>{{ ds.about }}</p>
+            <a href="{{ ds.link }}">View Code</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 
 <!-- contact me -->
 <section class="contactMeParent" id="contactMeParent">

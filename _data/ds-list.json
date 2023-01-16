@@ -1,0 +1,50 @@
+[
+  {
+    "icon": "./assets/icons/ds-icons/array-icon.svg",
+    "title": "Dynamic Array",
+    "about": "A dynamic array data structure implementation done in java along with applicable time complexities",
+    "link": "https://gist.github.com/sricharankrishnan/36defc44723412c4a49910f18c973837"
+  },
+  {
+    "icon": "./assets/icons/ds-icons/linked-list-icon.svg",
+    "title": "Singly Linked List",
+    "about": "A singly linked list data structure implementation done in java along with respective time complexities for each method",
+    "link": "https://gist.github.com/sricharankrishnan/4a0b27b036e65cff93485713e27e22aa"
+  },
+  {
+    "icon": "./assets/icons/ds-icons/doubly-linked-list-icon.svg",
+    "title": "Doubly Linked List",
+    "about": "A doubly linked list data structure implementation done in java along with respective time complexities for each method",
+    "link": "https://gist.github.com/sricharankrishnan/66ebe0b7b191b4090379884520060d39"
+  },
+  {
+    "icon": "./assets/icons/ds-icons/circular-linked-list-icon.svg",
+    "title": "Circular Linked List",
+    "about": "A circular linked list data structure implementation done in java along with respective time complexities for each method",
+    "link": "https://gist.github.com/sricharankrishnan/5a3ffc87d466f8c88b5513cb31108244"
+  },
+  {
+    "icon": "./assets/icons/ds-icons/stack-icon.svg",
+    "title": "Stack - Array Based",
+    "about": "A stack (array style) data structure implementation done in java along with respective time complexities for each method",
+    "link": "https://gist.github.com/sricharankrishnan/2c1637d5c93578227eff8b0eae832d83"
+  },
+  {
+    "icon": "./assets/icons/ds-icons/stack-linked-list-icon.svg",
+    "title": "Stack - Linked List Based",
+    "about": "A stack (linked list style) data structure implementation done in java along with respective time complexities for each method",
+    "link": "https://gist.github.com/sricharankrishnan/363598f4dd4771e14a844f3e71a08a9c"
+  },
+  {
+    "icon": "./assets/icons/ds-icons/queue-icon.svg",
+    "title": "Queue - Array Based",
+    "about": "A queue (array based) data structure implementation done in java along with respective time complexities for each method",
+    "link": "https://gist.github.com/sricharankrishnan/08a538b2ca47af3bc9395036c209eb76"
+  },
+  {
+    "icon": "./assets/icons/ds-icons/linked-list-queue-icon.svg",
+    "title": "Queue - Linked List Based",
+    "about": "A queue (singly linked list based) data structure implementation done in java along with respective time complexities for each method",
+    "link": "https://gist.github.com/sricharankrishnan/e4a566c50b0d7167590050c25fa6f18f"
+  }
+]

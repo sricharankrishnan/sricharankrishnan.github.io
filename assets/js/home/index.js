@@ -173,7 +173,37 @@
       this.init();
     }
     Constructor.prototype.init = function() {
+      var $this = this;
       contactForm = new ContactForm();
+      $this.skillsCarouselHandler();
+    };
+    Constructor.prototype.skillsCarouselHandler = function() {
+      var parentElement = $mainRoot.find("#dsaCarousel");
+      var config = {
+        nav: false,
+        dots: true,
+        loop: false,
+        responsive: {
+          0: {
+            items: 1,
+            stagePadding: 20
+          },
+          768: {
+            items: 2,
+            stagePadding: 30
+          },
+          992: {
+            items: 3,
+            stagePadding: 30
+          },
+          1200: {
+            items: 3,
+            stagePadding: 30
+          }
+        }
+      };
+
+      parentElement.owlCarousel(config);
     };
 
     return Constructor;

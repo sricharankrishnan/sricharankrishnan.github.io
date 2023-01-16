@@ -5,6 +5,8 @@
 @import "common-imports/app-nav.scss";
 @import "common-imports/app-footer.scss";
 @import "common-imports/snackbar.scss";
+@import "vendor-components/owl-carousel-2/owl.carousel.scss";
+@import "vendor-components/owl-carousel-2/owl.theme.default.scss";
 
 .homePage {
   .jumbotronSection {
@@ -16,7 +18,7 @@
         h1 {
           margin-top: 0;
           margin-bottom: 8px;
-          font-size: 2.3rem;
+          font-size: 3.6rem;
           color: $black;
         }
         .subTitle {
@@ -86,16 +88,108 @@
       }
     }
   }
+  .favoriteThings  {
+    padding: 80px 20px;
+    background: #f6f6f6;
+    .borderBoxContainer {
+      max-width: 600px;
+      margin: 0 auto;
+      .things {
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        line-height: 40px;
+        word-break: break-all;
+        font-weight: 800;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        .odd {
+          color: #8930e8;
+        }
+        .even {
+          color: #08c18a;
+        }
+      }
+      .text {
+        font-size: 4.0rem;
+        line-height: 45px;
+        font-weight: 700;
+        letter-spacing: -2px;
+      }
+    }
+  }
+  .skillsParent {
+    padding: 80px 20px;
+    .borderBoxContainer {
+      max-width: 600px;
+      margin: 0 auto;
+      h2 {
+        margin-top: 0;
+        margin-bottom: 60px;
+        font-size: 3.6rem;
+        line-height: 37px;
+        color: $black;
+      }
+      .codeIcon {
+        width: 50px;
+      }
+      .introText {
+        color: #444;
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 9px;
+        text-transform: uppercase;
+      }
+      .dsaCarousel {
+        .owl-stage {
+          padding-left: 0 !important;
+        }
+        .owl-dots {
+          margin-top: 35px;
+          .owl-dot {
+            span {
+              width: 8px;
+              height: 8px;
+              margin: 5px 5px 1px 5px;
+              background: #666;
+            }
+          }
+          .owl-dot.active {
+            span {
+              background: #08c18a;
+            }
+          }
+        }
+        .item {
+          margin-right: 10px;
+          border-radius: 10px;
+          .text {
+            padding-right: 20px;
+            h3 {
+              font-weight: 600;
+              font-size: 1.5rem;
+              text-transform: uppercase;
+            }
+            p {
+              font-size: 1.4rem;
+              line-height: 21px;
+              color: #555;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
   .contactMeParent {
-    padding: 0 20px 80px;
+    padding: 80px 20px;
     .borderBoxContainer {
       max-width: 600px;
       margin: 0 auto;
       h3 {
         margin-top: 0;
         margin-bottom: 30px;
-        font-size: 2.7rem;
-        line-height: 35px;
+        font-size: 3.6rem;
+        line-height: 37px;
         color: $black;
       }
       .helloIcon {
@@ -210,7 +304,7 @@
         .segment {
           h1 {
             font-size: 4.0rem;
-            line-height: 48px;
+            line-height: 43px;
           }
           .subTitle {
             line-height: 27px;
@@ -234,13 +328,29 @@
         }
       }
     }
+    .skillsParent {
+      .borderBoxContainer {
+        h2 {
+          display: inline-block;
+          margin-left: 9px;
+          font-size: 4.0rem;
+          line-height: 43px;
+        }
+        .codeIcon {
+          display: inline-block;
+          width: 80px;
+          vertical-align: middle;
+          margin-top: -72px;
+        }
+      }
+    }
     .contactMeParent {
       .borderBoxContainer {
         h3 {
           display: inline-block;
           margin-left: 9px;
-          font-size: 3.0rem;
-          line-height: 38px;
+          font-size: 4.0rem;
+          line-height: 43px;
         }
         .helloIcon {
           display: inline-block;
@@ -295,15 +405,30 @@
         max-width: 750px;
       }
     }
+    .favoriteThings {
+      .borderBoxContainer {
+        max-width: 750px;
+      }
+    }
+    .skillsParent {
+      .borderBoxContainer {
+        max-width: 750px;
+      }
+    }
   }
 }
 @media only screen and (min-width: 1200px) {
   .homePage {
     .jumbotronSection {
-      padding: 100px 20px 150px;
+      padding: 150px 20px;
       .customRow.top {
         max-width: 1100px;
         .segment {
+          h1 {
+            font-size:  6.0rem;
+            line-height: 57px;
+            letter-spacing: -2px;
+          }
           .metaItem {
             padding-right: 0;
           }
@@ -340,8 +465,39 @@
       }
     }
     .contactMeParent {
+      padding: 150px 20px;
       .borderBoxContainer {
         max-width: 1100px;
+        h3 {
+          font-size: 6.0rem;
+          line-height: 58px;
+          letter-spacing: -2px;
+        }
+      }
+    }
+    .favoriteThings {
+      padding: 100px 20px;
+      .borderBoxContainer {
+        max-width: 1100px;
+        .things {
+          font-size: 5.5rem;
+          line-height: 56px;
+        }
+        .text {
+          font-size: 6rem;
+          line-height: 60px;
+        }
+      }
+    }
+    .skillsParent {
+      padding: 100px 20px;
+      .borderBoxContainer {
+        max-width: 1100px;
+        h2 {
+          font-size: 6.0rem;
+          line-height: 58px;
+          letter-spacing: -2px;
+        }
       }
     }
   }
