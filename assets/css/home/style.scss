@@ -9,56 +9,93 @@
 .homePage {
   .jumbotronSection {
     padding: 80px 20px;
-    h1 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      font-size: 2.7rem;
-      color: $black;
-    }
-    .subTitle {
-      font-size: 1.8rem;
-      line-height: 25px;
-      font-weight: 300;
-      margin-bottom: 30px;
-    }
-    .customRow {
-      .heroImage {
-        max-width: 80%;
-        border-radius: 50%;
-      }
-    }
-    .meta {
-      margin-top: 30px;
-      margin-bottom: 10px;
-      li {
-        display: inline-block;
-        margin: 0 4px;
-        a {
-          display: block;
-          img {
-            width: 30px;
+    .customRow.top {
+      max-width: 600px;
+      margin: 0 auto;
+      .segment {
+        h1 {
+          margin-top: 0;
+          margin-bottom: 8px;
+          font-size: 2.3rem;
+          color: $black;
+        }
+        .subTitle {
+          font-size: 1.8rem;
+          line-height: 25px;
+          font-weight: 200;
+          margin-bottom: 15px;
+        }
+        .followMeText {
+          display: inline-block;
+          text-align: center;
+          font-size: 1.2rem;
+          vertical-align: middle;
+          margin-top: -15px;
+          margin-right: 5px;
+          color: #1a1ae1;
+        }
+        .followMe {
+          margin-bottom: 30px;
+          display: inline-block;
+          li {
+            display: inline-block;
+            margin-right: 6px;
+            a {
+              display: block;
+              img {
+                width: 23px;
+              }
+            }
           }
-          .linkedIn {
-            width: 35px;
+        }
+        .heroImage {
+          border-radius: 50%;
+        }
+        .metaItem {
+          width: 50%;
+          float: left;
+          padding: 0 15px 0 0;
+          margin-bottom: 35px;
+          .title, .text {
+            display: block;
+          }
+          .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+          }
+          .text {
+            color: #444;
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 22px;
           }
         }
       }
-    }
-    .email {
-      font-size: 1.2rem;
-      line-height: 19px;
+      .segment:first-child {
+        text-align: center;
+      }
+      .segment:nth-child(2) {
+        overflow: hidden;
+        position: relative;
+        width: 250px;
+        margin: 0 auto 30px;
+        border-radius: 50%;
+        padding: 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
     }
   }
   .contactMeParent {
     padding: 0 20px 80px;
     .borderBoxContainer {
-      max-width: 700px;
+      max-width: 600px;
       margin: 0 auto;
       h3 {
         margin-top: 0;
         margin-bottom: 30px;
         font-size: 2.7rem;
-        line-height: 36px;
+        line-height: 35px;
         color: $black;
       }
       .helloIcon {
@@ -169,67 +206,41 @@
 @media only screen and (min-width: 768px) {
   .homePage {
     .jumbotronSection {
-      max-width: 700px;
-      margin: 0 auto;
-      h1 {
-        font-size: 4.5rem;
-      }
-      .subTitle {
-        margin-bottom: 80px;
-      }
-      .customRow {
+      .customRow.top {
         .segment {
-          width: 25%;
-          float: left;
-          .item {
-            margin-bottom: 40px;
-            padding: 10px 15px;
-            h2 {
-              margin-top: 0;
-              margin-bottom: 15px;
-              font-size: 1.1rem;
-              font-family: $bodyFont;
-              font-weight: 500;
-              line-height: 18px;
-              text-transform: uppercase;
-              color: $thisGrey;
-            }
-            p {
-              font-size: 1.2rem;
-              line-height: 22px;
-              color: $black;
-              font-family: $headingFont;
-            }
+          h1 {
+            font-size: 4.0rem;
+            line-height: 48px;
+          }
+          .subTitle {
+            line-height: 27px;
+          }
+          .metaItem {
+            width: 33%;
           }
         }
-        .segment.right {
-          text-align: right;
-          .item {
-            p {
-              .largeNum {
-                font-size: 4.0rem;
-                line-height: 40px;
-              }
-            }
-          }
-        }
-        .heroImage {
+        .segment:first-child {
           width: 50%;
           float: left;
-          padding: 30px;
+          text-align: left;
+        }
+        .segment:nth-child(2) {
+          width: 50%;
+          max-width: 400px;
+          float: left;
+        }
+        .segment:last-child {
+          clear: both;
         }
       }
     }
     .contactMeParent {
       .borderBoxContainer {
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 0 40px;
         h3 {
           display: inline-block;
           margin-left: 9px;
-          font-size: 4.0rem;
-          line-height: 50px;
+          font-size: 3.0rem;
+          line-height: 38px;
         }
         .helloIcon {
           display: inline-block;
@@ -257,11 +268,31 @@
 @media only screen and (min-width: 992px) {
   .homePage {
     .jumbotronSection {
-      max-width: 900px;
+      .customRow.top {
+        max-width: 750px;
+        .segment {
+          .metaItem {
+            width: 100%;
+            float: none;
+            text-align: right;
+          }
+        }
+        .segment:first-child {
+          width: 35%;
+        }
+        .segment:nth-child(2) {
+          width: 40%;
+        }
+        .segment.last {
+          width: 25%;
+          float: left;
+          clear: unset;
+        }
+      }
     }
     .contactMeParent {
       .borderBoxContainer {
-        max-width: 900px;
+        max-width: 750px;
       }
     }
   }
@@ -269,41 +300,47 @@
 @media only screen and (min-width: 1200px) {
   .homePage {
     .jumbotronSection {
-      max-width: 1100px;
-      .customRow {
+      padding: 100px 20px 150px;
+      .customRow.top {
+        max-width: 1100px;
         .segment {
-          width: 20%;
-        }
-        .segment.left {
-          .item {
-            padding-left: 0;
-          }
-        }
-        .segment.right {
-          .item {
+          .metaItem {
             padding-right: 0;
           }
         }
-        .heroImage {
-          margin-left: 5%;
-          margin-right: 5%;
-          box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-          -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+        .segment.last {
+          width: calc(100% - 384px - 401px);
+          float: left;
+          clear: unset;
         }
-      }
-      .meta {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-      .emailIcon {
-        width: 60px;
-        margin-top: 30px;
+        .followParent {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          .followMe {
+            margin-bottom: 0;
+          }
+        }
+        .keysDiv {
+          position: absolute;
+          bottom: 0;
+          right: 30px;
+          ul {
+            margin-bottom: 0;
+            li {
+              width: 60px;
+              display: inline-block;
+              margin-right: -19px;
+              img {
+                margin-right: -20px;
+              }
+            }
+          }
+        }
       }
     }
     .contactMeParent {
       .borderBoxContainer {
-        padding: 0 20px;
         max-width: 1100px;
       }
     }
