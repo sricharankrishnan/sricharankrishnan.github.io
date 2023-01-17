@@ -1,0 +1,63 @@
+[
+  {
+    "icon": "./assets/icons/tech-icons/html5-icon.svg",
+    "name": "HTML5",
+    "is_focus": false
+  },
+  {
+    "icon": "./assets/icons/tech-icons/css3-icon.svg",
+    "name": "CSS3",
+    "is_focus": false
+  },
+  {
+    "icon": "./assets/icons/tech-icons/sass-icon.svg",
+    "name": "Sass",
+    "is_focus": false
+  },
+  {
+    "icon": "./assets/icons/tech-icons/js-icon.svg",
+    "name": "Javascript",
+    "is_focus": true
+  },
+  {
+    "icon": "./assets/icons/tech-icons/api-icon.svg",
+    "name": "API Integrations",
+    "is_focus": false
+  },
+  {
+    "icon": "./assets/icons/tech-icons/jquery-icon.svg",
+    "name": "jQuery",
+    "is_focus": false
+  },
+  {
+    "icon": "./assets/icons/tech-icons/react-icon.svg",
+    "name": "React",
+    "is_focus": true
+  },
+  {
+    "icon": "./assets/icons/tech-icons/redux-icon.svg",
+    "name": "Redux",
+    "is_focus": true
+  },
+  {
+    "icon": "./assets/icons/tech-icons/react-router-icon.svg",
+    "name": "React Router",
+    "is_focus": true
+  },
+  {
+    "icon": "./assets/icons/tech-icons/nodejs-icon.svg",
+    "name": "Node JS",
+    "is_focus": false
+  },
+  {
+    "icon": "./assets/icons/tech-icons/jekyll-icon.svg",
+    "name": "Jekyll - Static Site Generator",
+    "is_focus": false
+  },
+  {
+    "icon": "./assets/icons/tech-icons/sql-icon.svg",
+    "name": "Database Queries",
+    "is_focus": false,
+    "is_potential": true
+  }
+]

@@ -41,8 +41,8 @@ jsfile: "home/index"
     <!-- meta -->
     <div class="segment customRow last">
       <div class="metaItem">
-        <span class="title">5<sup>+</span>
-        <span class="text">Years of <br/>Experience</span>
+        <span class="title"><span id="expNum">0</span><sup>+</span>
+        <span class="text">Years of Hands on <br/>Experience</span>
       </div>
       <div class="metaItem">
         <span class="title">3</span>
@@ -105,20 +105,84 @@ jsfile: "home/index"
     alt="Technical Skills" title="Technical Skills"/>
     <h2>My Skills and Technical <br class="hidden-xs"/>Know Hows</h3>
 
-    <p class="introText">Data Structures: </p>
+    <!-- data structures -->
+    <p class="introText">Data Structures:</p>
     <div class="dsaCarousel owl-carousel owl-theme" id="dsaCarousel">
       {% assign dsList = site.data.ds-list %}
       {% for ds in dsList %}
-        <div class="item">
-          <img src="{{ ds.icon }}" class="img-responsive center-block"/>
+        <div class="item positionRelative">
+          <img src="{{ ds.icon }}" class="img-responsive center-block mainIcon"
+          alt="{{ ds.title }}" title="{{ ds.title }}"/>
           <div class="text">
             <h3>{{ ds.title }}</h3>
             <p>{{ ds.about }}</p>
-            <a href="{{ ds.link }}">View Code</a>
+            <a href="{{ ds.link }}">
+              View Code
+              <img src="./assets/icons/right-arrow-1040e2.svg" class="img-responsive center-block"
+              alt="View Code" title="View Code"/>
+            </a>
           </div>
         </div>
       {% endfor %}
     </div>
+
+    <!-- tech stack -->
+    <div class="customRow techRow">
+      <div class="segment">
+        <p class="introText">Tech Stack/Experience:</p>
+        <p class="description">
+          i believe that writing software patiently is the key to building good applications. i also
+          take the effort to write code that is clean and organized in the best possible way.
+        </p>
+      </div>
+      <div class="segment">
+        <ul class="list-unstyled">
+          {% for skill in site.data.tech-stack %}
+            {% assign listItemClass = "primary" %}
+              {% if skill.is_potential == true %}
+                {% assign listItemClass = "potential" %}
+              {% elsif skill.is_focus == false %}
+                {% assign listItemClass = "secondary" %}
+              {% endif %}
+            <li class="{{ listItemClass }}">
+              <img src="{{ skill.icon }}" class="img-responsive skillIcon" alt="{{ skill.name }}"
+              title="{{ skill.name }}"/>
+              {% if skill.is_focus == true %}
+                <img src="./assets/icons/green-check-mark.svg" class="img-responsive tickMark"
+                alt="Primary Focus" title="Primary Focus"/>
+              {% endif %}
+              {% if skill.is_potential == true %}
+                <img src="./assets/icons/question-icon.svg" class="img-responsive questionMark"
+                alt="Limited Knowledge" title="Limited Knowledge"/>
+              {% endif %}
+              {{ skill.name }}
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="legend">
+          <img src="./assets/icons/green-check-mark.svg" class="img-responsive tickMark"
+          alt="Primary Focus" title="Primary Focus"/>
+          Primary focus. While others are areas that have experience in writing
+          software and can provide additional assistance if needed
+        </p>
+        <p class="legend">
+          <img src="./assets/icons/question-icon.svg" class="img-responsive questionMark"
+          alt="Limited Knowledge" title="Limited Knowledge"/>
+          Although I have limited knowledge, I can communicate requirements across team members and
+          may in certain cases help resolve project requirements
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end note -->
+<div class="endnote">
+  <div class="borderBoxContainer">
+    <p>
+      although i am capable of working in teams, i also aspire to become a strong individual
+      contributor. i am actively involved in personal learning &amp; development as well.
+    </p>
   </div>
 </div>
 
@@ -160,3 +224,4 @@ jsfile: "home/index"
   </div>
 </section>
 <!-- contact me -->
+

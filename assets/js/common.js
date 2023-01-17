@@ -196,11 +196,27 @@ var AppSoundEffects = (function() {
   return Constructor;
 })();
 
+function footerVideoCreativeHandler() {
+  var parentElement = $("#videoCreative");
+  if (parentElement.length > 0) {
+    var config = {
+      parentElement: parentElement,
+      playInMobile: true,
+      playInTablet: true,
+      playInDesktop: true,
+      webmVideo: parentElement.attr("data-webm"),
+      mp4Video: parentElement.attr("data-mp4"),
+      fallbackImage: ""
+    };
+    buildHtmlVideo(config);
+  }
+}
 
 function centralControl() {
   /* always first */
   window.thisapp = new ThisApp();
   thisapp.init();
   window.appSounds = new AppSoundEffects();
+  footerVideoCreativeHandler();
 }
 centralControl();

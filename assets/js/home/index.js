@@ -176,6 +176,7 @@
       var $this = this;
       contactForm = new ContactForm();
       $this.skillsCarouselHandler();
+      $this.renderWorkExpYears();
     };
     Constructor.prototype.skillsCarouselHandler = function() {
       var parentElement = $mainRoot.find("#dsaCarousel");
@@ -190,14 +191,14 @@
           },
           768: {
             items: 2,
-            stagePadding: 30
+            stagePadding: 50
           },
           992: {
             items: 3,
             stagePadding: 30
           },
           1200: {
-            items: 3,
+            items: 4,
             stagePadding: 30
           }
         }
@@ -205,6 +206,12 @@
 
       parentElement.owlCarousel(config);
     };
+    Constructor.prototype.renderWorkExpYears = function() {
+      var element = $mainRoot.find("#expNum");
+      var startYear = 2018;
+      var currentYear = new Date().getFullYear();
+      element.text(currentYear - startYear);
+    }
 
     return Constructor;
   })();
