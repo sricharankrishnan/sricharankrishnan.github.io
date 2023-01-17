@@ -40,11 +40,6 @@
     "is_focus": true
   },
   {
-    "icon": "./assets/icons/tech-icons/react-router-icon.svg",
-    "name": "React Router",
-    "is_focus": true
-  },
-  {
     "icon": "./assets/icons/tech-icons/nodejs-icon.svg",
     "name": "Node JS",
     "is_focus": false
