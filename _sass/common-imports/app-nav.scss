@@ -11,9 +11,19 @@
     max-width: 1100px;
     margin: 0 auto;
     img {
-      width: 20px;
+      width: 40px;
       display: inline-block;
       margin-right: 7px;
+    }
+    .resumeLink {
+      border: 0;
+      text-transform: uppercase;
+      background: url('/assets/icons/suitcase-icon.gif') no-repeat left -3px;
+      background-size: 35px;
+      padding-left: 38px;
+      font-weight: 600;
+      width: 105px;
+      float: right;
     }
   }
 }
