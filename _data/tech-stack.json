@@ -36,7 +36,12 @@
   },
   {
     "icon": "./assets/icons/tech-icons/redux-icon.svg",
-    "name": "Redux",
+    "name": "Redux/Redux Toolkit",
+    "is_focus": true
+  },
+  {
+    "icon": "./assets/icons/tech-icons/react-router-icon.svg",
+    "name": "React Router",
     "is_focus": true
   },
   {
