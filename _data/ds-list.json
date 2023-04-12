@@ -21,7 +21,7 @@
     "icon": "./assets/icons/ds-icons/circular-linked-list-icon.svg",
     "title": "Circular Linked List",
     "about": "A circular linked list data structure implementation done in java along with respective time complexities for each method",
-    "link": "https://gist.github.com/sricharankrishnan/5a3ffc87d466f8c88b5513cb31108244"
+    "link": "https://gist.github.com/sricharankrishnan/1c81444efff28225ad02b19a1a521246"
   },
   {
     "icon": "./assets/icons/ds-icons/stack-icon.svg",
@@ -33,7 +33,7 @@
     "icon": "./assets/icons/ds-icons/stack-linked-list-icon.svg",
     "title": "Stack - Linked List Based",
     "about": "A stack (linked list style) data structure implementation done in java along with respective time complexities for each method",
-    "link": "https://gist.github.com/sricharankrishnan/363598f4dd4771e14a844f3e71a08a9c"
+    "link": "https://gist.github.com/sricharankrishnan/30a4276c2cd159c0f151dce8b162c5e7"
   },
   {
     "icon": "./assets/icons/ds-icons/queue-icon.svg",
